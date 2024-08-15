@@ -1,0 +1,23 @@
+{
+  "screenshots": {
+    "path": "./screenshots",
+    "pathPattern": "${DATE}/${FIXTURE}/${TEST}.png",
+    "takeOnFails": true,
+    "thumbnails": false
+  },
+  "reporter": {
+    "name": "html",
+    "output": "test-reports/report.html"
+  },
+  "browsers": {
+    "path": "chrome",
+    "cmd": "--incognito",
+    "disable-search-engine-choice-screen": "true",
+    "disableNativeAutomation": "true"
+  },
+  "skipJsErrors": true,
+  "selectorTimeout": 15000,
+  "assertionTimeout": 20000,
+  "pageLoadTimeout": 30000,
+  "pageRequestTimeout": 30000
+}

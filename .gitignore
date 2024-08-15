@@ -1,0 +1,11 @@
+.vscode/
+
+.idea/
+
+*node_modules/
+
+test-reports/
+
+screenshots/
+
+debug.log
