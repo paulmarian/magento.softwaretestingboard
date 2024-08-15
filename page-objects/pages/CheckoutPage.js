@@ -55,6 +55,7 @@ class CheckoutPage extends BasePage {
 
     async fillAddressDataAndSelectPayment() {
         await t.expect(this.provinceDropDown.visible).ok('Address Field can not be edited')
+        let phoneNumber = getRandomPhoneNumber().split(' x')[0]
         let availableProvince = this.provinceDropDown.find('option')
         let availableProvinceLength = await availableProvince.count
         await t.click(this.provinceDropDown)
@@ -65,7 +66,7 @@ class CheckoutPage extends BasePage {
             .typeText(this.addressField, getRandomAddress(), {replace: true})
             .typeText(this.cityField, getRandomCity(), {replace: true})
             .typeText(this.postCodeField, getRandomZipCode(), {replace: true})
-            .typeText(this.phoneNumberField, getRandomPhoneNumber(), {replace: true})
+            .typeText(this.phoneNumberField, phoneNumber, {replace: true})
         await t.click(this.shippingRadioButton)
     }
 }
