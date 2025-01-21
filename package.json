@@ -1,0 +1,31 @@
+{
+  "name": "softwaretestingboard-frontend-testcafe",
+  "version": "1.0.0",
+  "description": "Automated testing with Testcafe",
+  "main": "index.js",
+  "scripts": {
+    "chrome-comment": "SCRIPTS WHICH RUN TESTS ON CHROME BROWSER",
+    "test:chrome:smoke": "testcafe tests/",
+    "test:chrome:headless:smoke": "testcafe \"chrome:headless --disable-search-engine-choice-screen --disableNativeAutomation\" tests/",
+    "firefox-comment": "SCRIPTS WHICH RUN TESTS ON FIREFOX BROWSER",
+    "test:firefox:smoke": "testcafe firefox tests/",
+    "test:firefox:headless:smoke": "testcafe firefox:headless tests/",
+    "test:multiple:browsers:smoke": "testcafe \"chrome --disable-search-engine-choice-screen --disableNativeAutomation\",firefox tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulmarian/magento.softwaretestingboard"
+  },
+  "keywords": [
+    "Testing",
+    "Automation",
+    "Testcafe"
+  ],
+  "author": "Paul Marian",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "testcafe": "^3.6.2",
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
